@@ -1,0 +1,259 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* images */
+/* Start of Image Styles */
+/* Start of nonrectangle Image Sizes */
+.img-tn{
+    width: 50px;
+    height: 50px;
+}
+.img-exsm{
+    width: 90px;
+    height: 90px;
+}
+.img-sm{
+    width: 150px;
+    height: 150px;
+}
+.img-md{
+    width: 300px;
+    height: 300px;
+}
+.img-lg{
+    width: 500px;
+    height: 500px;
+}
+.img-exlg{
+    width: 700px;
+    height: 700px;
+}
+/* Start of Rectangle Image Sizes */
+/* Width * 1.618 ish */
+.recimg-tn{
+    width: 50px;
+    height: 50px;
+}
+.recimg-exsm{
+    width: 81px;
+    height: 50px;
+}
+.recimg-sm{
+    width: 243px;
+    height: 150px;
+}
+.recimg-md{
+    width: 485px;
+    height: 300px;
+}
+.recimg-lg{
+    width: 809px;
+    height: 500px;
+}
+.recimg-exlg{
+    width: 1137px;
+    height: 700px;
+}
+/* Width * 1.618 ish */
+.tallrecimg-tn{
+    width: 50px;
+    height: 50px;
+}
+.tallrecimg-exsm{
+    width: 50px;
+    height: 81px;
+}
+.tallrecimg-sm{
+    width: 150px;
+    height: 243px;
+}
+.tallrecimg-md{
+    width: 300px;
+    height: 485px;
+}
+.tallrecimg-lg{
+    width: 500px;
+    height: 809px;
+}
+.tallrecimg-exlg{
+    width: 700px;
+    height: 1197px;
+}
+/* End of Rectangle Image Sizes
+/* End of Image Sizes */
+/* Start of NavBar Styles */
+/* Styles for social media menu */
+/* Credit to Morten Rand-Hendrikson */
+
+.socialness li a::before {
+    font-family: 'FontAwesome';
+}
+
+.socialness li a[href*="dribbble.com"]::before { content: '\f17d'; }
+
+.socialness li a[href*="facebook.com"]::before { content: '\f09a'; }
+
+.socialness li a[href*="flickr.com"]::before { content: '\f16e'; }
+
+.socialness li a[href*="foursquare.com"]::before { content: '\f180'; }
+
+.socialness li a[href*="github.com"]::before { content: '\f09b'; }
+
+.socialness li a[href*="plus.google.com"]::before { content: '\f0d5'; }
+
+.socialness li a[href*="instagram.com"]::before { content: '\f16d'; }
+
+.socialness li a[href*="jsfiddle.com"]::before { content: '\f1cc'; }
+
+.socialness li a[href*="linkedin.com"]::before { content: '\f0e1'; }
+
+.socialness li a[href*="pinterest.com"]::before { content: '\f0d2'; }
+
+.socialness li a[href*="reddit.com"]::before { content: '\f1a1'; }
+
+.socialnessli a[href*="soundcloud.com"]::before { content: '\f1be'; }
+
+.socialness li a[href*="stackoverflow.com"]::before { content: '\f16c'; }
+
+.socialness li a[href*="tumblr.com"]::before { content: '\f173'; }
+
+.socialness li a[href*="twitter.com"]::before { content: '\f099';}
+
+.socialness li a[href*="vimeo.com"]::before { content: '\f194'; }
+
+.socialness li a[href*="vine.co"]::before { content: '\f1ca'; }
+
+.socialness li a[href*="yelp.com"]::before { content: '\f1e9'; }
+
+.socialness li a[href*="youtube.com"]::before { content: '\f167'; }
+
+.socialness li a[href*="wordpress.com"]::before { content: '\f19a'; }
+
+.socialness li a[href*="bloglovin.com"]::before { content: '\f004'; }
+
+/* Start of social menu stuffs */
+/* Start of other navbar stuff */
+/* .navbar1-navbar a{
+    font-size: 1.333em;
+} */
+.navbar1-navbar a:hover{
+    text-shadow: 1px 1px 3px black;
+}
+/* End of navbar styles */
+/* Start of subnavbar Styles */
+/* 
+.subnavbar1-navbar a{
+    font-size: 1.333em;
+} */
+.subnavbar1-navbar a:hover{
+    text-shadow: 1px 1px 3px whitesmoke;
+}
+/* End of subnavbar Styles */
+/* Dropdown Styles */
+.DropDown::after{
+    font-family: 'FontAwesome';
+    content: '\f078';
+}
+.DropDown_Side::after{
+    font-family: 'FontAwesome';
+    content: '\f054';
+}
+
+/* End of Dropdown Styles */
+/* End of NavBar Styles */
+/* Start of Image SLider */
+.arrow{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    top: 220px;
+    width:0;
+    height: 0;
+    border-style: solid;
+}
+
+/* End of Image SLider */
+/* Start of ticker styles */
+/* Start of horizontal ticker styles */
+
+  
+@keyframes horizontal-ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-2000px, 0, 0);
+      transform: translate3d(-2000px, 0, 0);
+    }
+  }
+  .horizontal-ticker {
+
+    display: flex;
+    line-height: 4rem;  
+    white-space: nowrap; 
+    padding-right: 100%;
+    
+    -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: horizontal-ticker;
+           animation-name: horizontal-ticker;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+  }
+
+
+/* End of horizontal ticker styles
+/* End of ticker styles */
+/* Toggler 3 */
+
+/* hides paragraphs */
+.panels > div{
+    display:none;
+}
+
+/* used for highlighting selected tab */
+.panels >input[id="tab1"]:checked ~ nav label[for="tab1"],
+.panels >input[id="tab2"]:checked ~ nav label[for="tab2"],
+.panels >input[id="tab3"]:checked ~ nav label[for="tab3"],
+.panels >input[id="tab4"]:checked ~ nav label[for="tab4"],
+.panels >input[id="tab5"]:checked ~ nav label[for="tab5"],
+.panels >input[id="tab6"]:checked ~ nav label[for="tab6"],
+.panels >input[id="tab7"]:checked ~ nav label[for="tab7"],
+.panels >input[id="tab8"]:checked ~ nav label[for="tab8"],
+.panels >input[id="tab9"]:checked ~ nav label[for="tab9"],
+.panels >input[id="tab10"]:checked ~ nav label[for="tab10"]
+{
+    background-color: yellow;
+    color: black;
+}
+
+.panels > input[id="tab1"]:checked ~ div[id="panel1"],
+.panels > input[id="tab2"]:checked ~ div[id="panel2"],
+.panels > input[id="tab3"]:checked ~ div[id="panel3"],
+.panels > input[id="tab4"]:checked ~ div[id="panel4"],
+.panels > input[id="tab5"]:checked ~ div[id="panel5"],
+.panels > input[id="tab6"]:checked ~ div[id="panel6"],
+.panels > input[id="tab7"]:checked ~ div[id="panel7"],
+.panels > input[id="tab8"]:checked ~ div[id="panel8"],
+.panels > input[id="tab9"]:checked ~ div[id="panel9"],
+.panels > input[id="tab10"]:checked ~ div[id="panel10"]
+{
+    display: flex;
+}
+
+/* Toggler 3*/
+/* start big list numbers */
+ol.bigList li::before{
+    content: counter(aCounter, decimal-leading-zero);
+    display: flex;
+    padding: 0;
+    font-size: 5.3em;
+    text-align: right;
+    position: relative;
+    left: -100px;
+    top: 65px;
+}
+/* end of big list numbers */
