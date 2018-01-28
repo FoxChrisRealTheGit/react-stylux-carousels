@@ -11,25 +11,18 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-npm install --save react-stylux-images
+npm install --save react-stylux-carousels
 ```
 
 ## How To Use Stylux
 
-### Included in the images of react-stylux is:
-* Figure
-* Circle Image
-* Oval Image
-* Rectangle Image
-* Rounded Image
-* Rounded Rectangle Image
-* Square Image
-* Tall Rectangle Image
-* Tall Rounded Rectangle Image
-* Hero 1-5
+### Included in the carousels of react-stylux is:
+* Carousels 1-5
 
 #### Currently almost done:
-* Oval Image
+* Carousel 2
+* Carousel 3
+* Carousel 4
 
 ### Step by step:
 
