@@ -1,6 +1,6 @@
 {
   "name": "react-stylux-carousels",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The carousels mechanic of react-stylux",
   "main": "index.js",
   "scripts": {
