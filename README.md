@@ -15,6 +15,15 @@ npm install --save react-stylux-carousels
 ```
 
 ## How To Use Stylux
+### Table of Contents
+- [What's included](#whats-included-in-the-carousels-of-react-stylux-is)
+- [Step by Step](#step-by-step)
+- [Animation Notes](#animation-notes)
+- [Responsive Notes](#responsive-notes)
+- [Carousels](#carousels)
+- [Feature Wish List](#feature-wish-list)
+- [Acknowledgments](#acknowledgments)
+- [Changelog](#changelog)
 
 ### Included in the carousels of react-stylux is:
 * Carousels 1-5
@@ -295,7 +304,10 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 * A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching me to code good
 * A big thank you to Morten Rand-Hendriksen for your videos on flex box and the code that allows the className socialness to work
 * Credit to http://meyerweb.com/eric/tools/css/reset/  for use of a reset file
-* Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style
+* Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style object
+* Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 
 ## Changelog
+**0.2.1**
+* updated to current stable react stylux version 0.2.9

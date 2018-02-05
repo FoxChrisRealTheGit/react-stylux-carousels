@@ -43,7 +43,13 @@ var Carousel2 = function (_Component) {
             mainid: props.mainid,
             sliderid: props.sliderid,
             mainClassName: props.mainClassName,
-            sliderClassName: props.sliderClassName
+            sliderClassName: props.sliderClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
         };
         _this.slideLeft = _this.slideLeft.bind(_this);
         _this.slideRight = _this.slideRight.bind(_this);
@@ -75,7 +81,7 @@ var Carousel2 = function (_Component) {
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            clearInterval(this.state.intervalTime);
+            return clearInterval(this.state.intervalTime);
         }
     }, {
         key: 'slideLeft',

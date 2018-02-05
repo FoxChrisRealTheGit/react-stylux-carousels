@@ -47,11 +47,21 @@ var Carousel1 = function (_Component) {
             mainClassName: props.mainClassName,
             leftArrowClassName: props.leftArrowClassName,
             rightArrowClassName: props.rightArrowClassName,
-            sliderClassName: props.sliderClassName
-
+            sliderClassName: props.sliderClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            intervalTime: ''
         };
         _this.slideLeft = _this.slideLeft.bind(_this);
         _this.slideRight = _this.slideRight.bind(_this);
+        _this.ishovering = _this.ishovering.bind(_this);
+        _this.isnolongerhovering = _this.isnolongerhovering.bind(_this);
         return _this;
     }
 
@@ -64,7 +74,10 @@ var Carousel1 = function (_Component) {
                 slides.push(CHILDS[g]);
             }
             var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
-            this.setState({ sliderImages: slides, intervalTime: intervalTime });
+            this.setState({
+                sliderImages: slides,
+                intervalTime: intervalTime
+            });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -80,26 +93,58 @@ var Carousel1 = function (_Component) {
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            clearInterval(this.state.intervalTime);
+            return clearInterval(this.state.intervalTime);
         }
     }, {
         key: 'slideLeft',
         value: function slideLeft() {
             if (this.state.cur === 0) {
-                return this.setState({ cur: this.state.sliderImages.length - 1 });
+                return this.setState({
+                    cur: this.state.sliderImages.length - 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease-in',
+                    animationName: 'slideInRight',
+                    animationDuration: '0.75s'
+                });
             } else {
-                return this.setState({ cur: this.state.cur - 1 });
+                return this.setState({
+                    cur: this.state.cur - 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease-in',
+                    animationName: 'slideInRight',
+                    animationDuration: '0.75s'
+                });
             }
         }
     }, {
         key: 'slideRight',
         value: function slideRight() {
             if (this.state.cur >= this.state.sliderImages.length - 1) {
-                return this.setState({ cur: 0 });
+                return this.setState({
+                    cur: 0,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease',
+                    animationName: 'slideInLeft',
+                    animationDuration: '0.75s'
+                });
             } else {
-                return this.setState({ cur: this.state.cur + 1 });
+                return this.setState({
+                    cur: this.state.cur + 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease',
+                    animationName: 'slideInLeft',
+                    animationDuration: '0.75s'
+                });
             }
         }
+    }, {
+        key: 'ishovering',
+        value: function ishovering() {
+            return clearInterval(this.state.intervalTime);
+        }
+    }, {
+        key: 'isnolongerhovering',
+        value: function isnolongerhovering() {}
     }, {
         key: 'render',
         value: function render() {
@@ -147,7 +192,13 @@ var Carousel1 = function (_Component) {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                textAlign: 'center'
+                textAlign: 'center',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             // const SLIDE_TEXT = {
             //     fontSize: '5em',
@@ -168,7 +219,13 @@ var Carousel1 = function (_Component) {
             });
             return _react2.default.createElement(
                 'div',
-                { style: WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                { style: WRAP, id: this.state.mainid, className: this.state.mainClassName,
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.ishovering();
+                    },
+                    onMouseOut: function onMouseOut() {
+                        return _this2.isnolongerhovering();
+                    } },
                 _react2.default.createElement('div', { style: LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
                         return _this2.slideLeft();
                     } }),

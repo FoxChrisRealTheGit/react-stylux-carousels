@@ -79,9 +79,63 @@
 }
 /* End of Rectangle Image Sizes
 /* End of Image Sizes */
+/* Start of Pull Quotes */
+/* Start of Pull Quotes 1 */
+.pullQuote1{
+    width: inherit;
+    padding: 0px 12%;
+    margin: 20px 0 40px 0;
+    position: relative;
+}
+.pullQuote1-text{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+.pullQuote1-text::before{
+    content:'\201c';
+    font-size: 6em;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    color: rgba(220, 220, 220, 0.4);
+}
+
+.pullQuote1 cite::before{
+    content: '\2014';
+}
+.pullQuote1 cite{
+    font-size: 1.333em;
+    padding-left: 50px;
+    color: lightslategray;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+}
+/* End of Pull Quotes 1 */
+/* Start of Pull Quotes 2 */
+.pullQuote2{
+    width: 250px;
+    padding: 5px;
+    font-size: 1.333em;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray; 
+    margin: 0 auto;
+}
+.pullQuote2-text{
+    font-size: 1.333em;
+    margin: 5px;
+}
+.pullQuote2 cite::before{
+    content: '\2014';
+}
+.pullQuote2 cite{
+    margin: 5px;
+    color: lightslategray;
+}
+/* End of Pull Quotes 2 */
 /* Start of NavBar Styles */
 /* Styles for social media menu */
-/* Credit to Morten Rand-Hendrikson */
+/* Credit to Morten Rand-Hendriksen */
 
 .socialness li a::before {
     font-family: 'FontAwesome';
@@ -171,42 +225,6 @@
 }
 
 /* End of Image SLider */
-/* Start of ticker styles */
-/* Start of horizontal ticker styles */
-
-  
-@keyframes horizontal-ticker {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      visibility: visible;
-    }
-  
-    100% {
-      -webkit-transform: translate3d(-2000px, 0, 0);
-      transform: translate3d(-2000px, 0, 0);
-    }
-  }
-  .horizontal-ticker {
-
-    display: flex;
-    line-height: 4rem;  
-    white-space: nowrap; 
-    padding-right: 100%;
-    
-    -webkit-animation-iteration-count: infinite; 
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-   -webkit-animation-name: horizontal-ticker;
-           animation-name: horizontal-ticker;
-    -webkit-animation-duration: 30s;
-            animation-duration: 30s;
-  }
-
-
-/* End of horizontal ticker styles
-/* End of ticker styles */
 /* Toggler 3 */
 
 /* hides paragraphs */

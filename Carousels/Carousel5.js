@@ -43,7 +43,15 @@ var Carousel5 = function (_Component) {
             mainid: props.mainid,
             sliderid: props.sliderid,
             mainClassName: props.mainClassName,
-            sliderClassName: props.sliderClassName
+            sliderClassName: props.sliderClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         _this.slideLeft = _this.slideLeft.bind(_this);
         _this.slideRight = _this.slideRight.bind(_this);
@@ -75,24 +83,48 @@ var Carousel5 = function (_Component) {
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            clearInterval(this.state.intervalTime);
+            return clearInterval(this.state.intervalTime);
         }
     }, {
         key: 'slideLeft',
         value: function slideLeft() {
             if (this.state.cur === 0) {
-                return this.setState({ cur: this.state.sliderImages.length - 1 });
+                return this.setState({
+                    cur: this.state.sliderImages.length - 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease-in',
+                    animationName: 'slideInRight',
+                    animationDuration: '0.75s'
+                });
             } else {
-                return this.setState({ cur: this.state.cur - 1 });
+                return this.setState({
+                    cur: this.state.cur - 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease-in',
+                    animationName: 'slideInRight',
+                    animationDuration: '0.75s'
+                });
             }
         }
     }, {
         key: 'slideRight',
         value: function slideRight() {
             if (this.state.cur >= this.state.sliderImages.length - 1) {
-                return this.setState({ cur: 0 });
+                return this.setState({
+                    cur: 0,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease',
+                    animationName: 'slideInLeft',
+                    animationDuration: '0.75s'
+                });
             } else {
-                return this.setState({ cur: this.state.cur + 1 });
+                return this.setState({
+                    cur: this.state.cur + 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease',
+                    animationName: 'slideInLeft',
+                    animationDuration: '0.75s'
+                });
             }
         }
     }, {
@@ -126,7 +158,13 @@ var Carousel5 = function (_Component) {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                textAlign: 'center'
+                textAlign: 'center',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var RENDERSLIDES = this.state.sliderImages.map(function (x, i) {
                 return _react2.default.createElement(
